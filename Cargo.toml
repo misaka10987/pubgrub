@@ -1,24 +1,29 @@
 # SPDX-License-Identifier: MPL-2.0
-
-[workspace]
-members = ["version-ranges"]
-
 [package]
-name = "pubgrub"
-version = "0.4.0"
+name = "creeper-pubgrub"
+version = "0.1.0+pubgrub-0.4.0"
 authors = [
     "Matthieu Pizenberg <matthieu.pizenberg@gmail.com>",
     "Alex Tokarev <aleksator@gmail.com>",
     "Jacob Finkelman <Eh2406@wayne.edu>",
+    "misaka10987 <misaka10987@outlook.com>",
 ]
 edition = "2024"
 description = "PubGrub version solving algorithm"
 readme = "README.md"
-repository = "https://github.com/pubgrub-rs/pubgrub"
+repository = "https://github.com/misaka10987/pubgrub"
 license = "MPL-2.0"
 keywords = ["dependency", "pubgrub", "semver", "solver", "version"]
 categories = ["algorithms"]
-include = ["Cargo.toml", "LICENSE", "README.md", "src/**", "tests/**", "examples/**", "benches/**"]
+include = [
+    "Cargo.toml",
+    "LICENSE",
+    "README.md",
+    "src/**",
+    "tests/**",
+    "examples/**",
+    "benches/**",
+]
 # NOTE: Keep in sync with `ci.yml`
 rust-version = "1.92"
 
@@ -32,7 +37,7 @@ priority-queue = "2.3.1"
 rustc-hash = "^2.1.1"
 serde = { version = "1.0.219", features = ["derive"], optional = true }
 thiserror = "2.0"
-version-ranges = { version = "0.1.0", path = "version-ranges" }
+version-ranges = "0.1.0"
 
 [dev-dependencies]
 criterion = { version = "4.7.0", package = "codspeed-criterion-compat" }
@@ -42,7 +47,7 @@ cc = "1.2.40"
 proptest = "1.6.0"
 ron = "0.12.0"
 varisat = "0.2.2"
-version-ranges = { version = "0.1.0", path = "version-ranges", features = ["proptest"] }
+version-ranges = { version = "0.1.0", features = ["proptest"] }
 
 [features]
 serde = ["dep:serde", "version-ranges/serde"]

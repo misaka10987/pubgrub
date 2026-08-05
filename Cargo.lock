@@ -279,6 +279,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "creeper-pubgrub"
+version = "0.1.0+pubgrub-0.4.0"
+dependencies = [
+ "cc",
+ "codspeed-criterion-compat",
+ "env_logger",
+ "indexmap",
+ "log",
+ "priority-queue",
+ "proptest",
+ "ron",
+ "rustc-hash 2.1.2",
+ "serde",
+ "thiserror 2.0.18",
+ "varisat",
+ "version-ranges",
+]
+
+[[package]]
 name = "criterion-plot"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -672,25 +691,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "pubgrub"
-version = "0.4.0"
-dependencies = [
- "cc",
- "codspeed-criterion-compat",
- "env_logger",
- "indexmap",
- "log",
- "priority-queue",
- "proptest",
- "ron",
- "rustc-hash 2.1.2",
- "serde",
- "thiserror 2.0.18",
- "varisat",
- "version-ranges",
-]
-
-[[package]]
 name = "quick-error"
 version = "1.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -869,12 +869,6 @@ checksum = "93fc1dc3aaa9bfed95e02e6eadabb4baf7e3078b0bd1b4d7b6b0b68378900502"
 dependencies = [
  "winapi-util",
 ]
-
-[[package]]
-name = "semver"
-version = "1.0.28"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8a7852d02fc848982e0c167ef163aaff9cd91dc640ba85e263cb1ce46fae51cd"
 
 [[package]]
 name = "serde"
@@ -1161,10 +1155,10 @@ checksum = "68ed610a8d5e63d9c0e31300e8fdb55104c5f21e422743a9dc74848fa8317fd2"
 [[package]]
 name = "version-ranges"
 version = "0.1.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "31e9bd4e9c9ff6a2a9b5969462ba26216af3e010df0377dad8320ab515262ef8"
 dependencies = [
  "proptest",
- "ron",
- "semver",
  "serde",
  "smallvec",
 ]
